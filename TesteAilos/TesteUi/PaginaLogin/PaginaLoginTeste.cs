@@ -4,11 +4,12 @@ namespace TesteAilos.TesteUi.PaginaLogin
 {
     public class PaginaLoginTeste
     {
-        RoboPaginaLogin robo = new RoboPaginaLogin();
+        RoboPaginaLogin robo;
         
         [SetUp]
         public void t()
         {
+            robo = new RoboPaginaLogin();
             robo.Setup();
         }
 

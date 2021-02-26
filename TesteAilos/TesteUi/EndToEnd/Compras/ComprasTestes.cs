@@ -7,11 +7,12 @@ namespace TesteAilos.TesteUi.EndToEnd.Compras
 {
     public class ComprasTestes
     {
-        RoboCompras robo = new RoboCompras();
+        RoboCompras robo;
 
         [SetUp]
         public void t()
         {
+            robo = new RoboCompras();
             robo.Setup();
         }
 
@@ -25,6 +26,18 @@ namespace TesteAilos.TesteUi.EndToEnd.Compras
                 .QuandoPreenchiOsCamposDeEntrega()
                 .QuandoCliqueiEmContinue()
                 .QuandoCliqueiEmFinish();
+        }
+
+        [Test]
+        public void ValidaTotalCompra()
+        {
+            robo.DadoQueEuEstejaNaAreaLogada()
+                .QuandoEuSelecioneiTodosOsProdutos()
+                .QuandoCliqueiNoCarrinho()
+                .QuandoCliqueiNoCheckout()
+                .QuandoPreenchiOsCamposDeEntrega()
+                .QuandoCliqueiEmContinue()
+                .EntaoOValorTotalDaComprarDeveSerIgualAoValorDoCampoItemTotal();
         }
 
         [TearDown]
