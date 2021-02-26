@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using RestSharp;
 using System.Net;
 using TesteAilos.Modelo;
-using System.IO;
 using System.Linq;
 using TechTalk.SpecFlow;
 using System.Text.Json;
@@ -169,57 +167,6 @@ namespace TesteAilos.TesteApi
             return this;
         }
   
-
-        //[Test]
-        //public void EditaUsuario()
-        //{
-        //    var clienteGet = new RestClient(urlBase);
-        //    var requisicaoGet = new RestRequest(Method.GET) { RequestFormat = DataFormat.Json };
-        //    var respostaGet = clienteGet.Execute(requisicaoGet);
-
-        //    requisicao.AddJsonBody(new
-        //    {
-        //        nome = "Romario Camilo Corrêa de Souza",
-        //        email = "romari0000o@qa.com",
-        //        password = "teste",
-        //        administrador = "true"
-        //    });
-
-        //    List<Usuario> usuarios = RetornaUsuariosCadastrados(respostaGet);
-
-        //    if (usuarios.Count > 0)
-        //    {
-        //        Usuario usuarioDeletado = usuarios.FirstOrDefault(u => u.email == "romari0000o@qa.com");
-        //        string idApagado = "";
-
-        //        if (usuarioDeletado != null)
-        //        {
-        //            idApagado = "/" + usuarioDeletado._id;
-        //        }
-
-        //        if (usuarioDeletado == null)
-        //        {
-        //            idApagado = "/" + usuarios[0]._id;
-        //        }
-
-        //        var clienteEdita = new RestClient(urlBase + idApagado);
-        //        var requisicaoEdita = new RestRequest(Method.PUT) { RequestFormat = DataFormat.Json };
-        //        var respostaEdita = clienteEdita.Execute(requisicaoEdita);
-
-        //        if (respostaEdita.StatusCode == HttpStatusCode.OK && respostaEdita.Content.Contains("Registro excluído com sucesso"))
-        //        {
-        //            Assert.Pass();
-        //        }
-        //        else
-        //        {
-        //            Assert.Fail();
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Assert.Fail();
-        //    }
-        //}
 
         public void CadastraUsuario(string emailUsuario)
         {
