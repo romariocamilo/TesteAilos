@@ -3,7 +3,11 @@ Teste Ailos
 
 
 Teste de front: TesteAilos\TesteUi
+
+
 Teste API: TesteAilos\TesteApi
+
+
 Ao executar os testes de frontend dois cenários tem as evidências criadas na raiz da solução: \bin\Debug\netcoreapp3.1\Evidencias
 
 
